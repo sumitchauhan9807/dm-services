@@ -6,8 +6,10 @@ require("dotenv").config();
 // var cors = require("cors");
 
 
-
-
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+const Routes = require("./routers");
+Routes.initRoutes(app)
 
 app.get('/',(req,res,next)=>{
   res.json({message:"ecpay service here"})
