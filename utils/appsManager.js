@@ -1,13 +1,13 @@
-//https://guidgenerator.com/online-guid-generator.aspx 
+//https://guidgenerator.com/online-guid-generator.aspx   whsec_OgXg1jtnzVoLDRH9kwuKSOIT7lzGJT7a
 // id generator
-const PRODUCTION = false
+const PRODUCTION = true
 const appsMeta = [
   {
     appToken:'DDDD32CC-46A4-42F5-AA63-6E81BFFF28C4',
     services:['ecpay','stripe'],
     stripeMeta: {
       webhookUrl: PRODUCTION ? "https://dialogmakers-international.com/api/user/login" : "http://localhost:8087/api/public/stripe-hook",
-      webhookSecret:'whsec_e6e7a160d97c77afaa6ffff1a0484493b84197ab3b03af34f0a1239ee09d1dd8',
+      webhookSecret: PRODUCTION ? 'whsec_e6e7a160d97c77afaa6ffff1a0484493b84197ab3b03af34f0a1239ee09d1dd8' : 'whsec_OgXg1jtnzVoLDRH9kwuKSOIT7lzGJT7a',
       stripecredentials:{
         dev: {
           secret : 'sk_test_zXvwMLsLPNO2j2Z5spUc6aAx00nbIWVAPm',
