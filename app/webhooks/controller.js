@@ -32,7 +32,7 @@ const stripeHook = async (req,res,next) => {
         }
         await database.createCron(toSaveData)
         initStripeHook(appData.stripeMeta.webhookUrl,event,postData?.data?.object?.client_reference_id)
-        res.status(200)
+        res.status(200).json({message:"success"})
       } catch (err) {
         // On error, log and return the error message
         console.log(`❌ Error message: ${err.message}`);
