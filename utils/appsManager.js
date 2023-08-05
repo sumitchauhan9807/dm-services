@@ -6,7 +6,7 @@ const appsMeta = [
     appToken:'DDDD32CC-46A4-42F5-AA63-6E81BFFF28C4',
     services:['ecpay','stripe'],
     stripeMeta: {
-      webhookUrl: PRODUCTION ? "https://dialogmakers-international.com/api/user/login" : "http://localhost:8087/api/public/stripe-hook",
+      webhookUrl: PRODUCTION ? "https://dialogmakers-international.com/api/public/stripe-hook" : "http://localhost:8087/api/public/stripe-hook",
       webhookSecret: PRODUCTION ? 'whsec_OgXg1jtnzVoLDRH9kwuKSOIT7lzGJT7a' : 'whsec_e6e7a160d97c77afaa6ffff1a0484493b84197ab3b03af34f0a1239ee09d1dd8',
       stripecredentials:{
         dev: {
